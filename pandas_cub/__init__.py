@@ -30,7 +30,9 @@ class DataFrame:
         self._add_docs()
 
     def _check_input_types(self, data):
-        pass
+        if not isinstance(data, dict):
+            raise TypeError("'data' must be a dictionary");
+       # pass
 
     def _check_array_lengths(self, data):
         pass
